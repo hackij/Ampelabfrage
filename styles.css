@@ -133,8 +133,8 @@ h1 {
 .intro-text {
   margin-bottom: 34px;
   font-size: 0.92rem;
-  text-transform: uppercase;
-  letter-spacing: 0.24em;
+  text-transform: none;
+  letter-spacing: 0;
   color: var(--text-soft);
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 300;
