@@ -47,7 +47,7 @@ function showSelection() {
   setThemeColor("#4b5d67");
 }
 
-async function showSignal(signalName) {
+function showSignal(signalName) {
   const signal = signalConfig[signalName];
 
   if (!signal) {
@@ -60,16 +60,17 @@ async function showSignal(signalName) {
   displayPanel.hidden = false;
   document.body.style.overflow = "hidden";
   setThemeColor(signal.color);
-  try {
-    await enableFullscreen();
-  } catch {
-    // Fullscreen is optional; the color view still works without it.
-  }
+
+  requestAnimationFrame(() => {
+    enableFullscreen().catch(() => {
+      // Fullscreen is optional; the color view still works without it.
+    });
+  });
 }
 
 signalButtons.forEach((button) => {
-  button.addEventListener("click", async () => {
-    await showSignal(button.dataset.signal);
+  button.addEventListener("click", () => {
+    showSignal(button.dataset.signal);
   });
 });
 
