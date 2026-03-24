@@ -10,7 +10,7 @@ const signalConfig = {
     color: "#e0a800",
   },
   green: {
-    title: "Gruen",
+    title: "Grün",
     cssClass: "is-green",
     color: "#2f9e44",
   },
@@ -56,22 +56,25 @@ function showSignal(signalName) {
   setThemeColor(signal.color);
 }
 
+function handleOverlayInteraction(event) {
+  event.preventDefault();
+  showSelection();
+}
+
 signalButtons.forEach((button) => {
   button.addEventListener("click", () => {
     showSignal(button.dataset.signal);
   });
 });
 
-function returnToSelection() {
-  showSelection();
-}
-
-displayPanel.addEventListener("click", returnToSelection);
+displayPanel.addEventListener("click", handleOverlayInteraction);
+displayPanel.addEventListener("pointerup", handleOverlayInteraction);
+displayPanel.addEventListener("touchend", handleOverlayInteraction, { passive: false });
 
 displaySurface.addEventListener("keydown", (event) => {
   if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
-    returnToSelection();
+    showSelection();
   }
 });
 
