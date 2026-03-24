@@ -18,7 +18,6 @@ const signalConfig = {
 
 const controlPanel = document.querySelector("#controlPanel");
 const displayPanel = document.querySelector("#displayPanel");
-const displaySurface = document.querySelector("#displaySurface");
 const signalButtons = document.querySelectorAll("[data-signal]");
 const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
@@ -71,7 +70,7 @@ displayPanel.addEventListener("click", handleOverlayInteraction);
 displayPanel.addEventListener("pointerup", handleOverlayInteraction);
 displayPanel.addEventListener("touchend", handleOverlayInteraction, { passive: false });
 
-displaySurface.addEventListener("keydown", (event) => {
+displayPanel.addEventListener("keydown", (event) => {
   if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
     showSelection();
