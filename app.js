@@ -20,6 +20,7 @@ const controlPanel = document.querySelector("#controlPanel");
 const displayPanel = document.querySelector("#displayPanel");
 const signalButtons = document.querySelectorAll("[data-signal]");
 const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+const rootElement = document.documentElement;
 
 function clearStateClasses() {
   displayPanel.classList.remove("is-idle", "is-red", "is-yellow", "is-green");
@@ -37,6 +38,8 @@ function showSelection() {
   controlPanel.hidden = false;
   displayPanel.hidden = true;
   document.body.style.overflow = "";
+  rootElement.classList.remove("signal-red", "signal-yellow", "signal-green");
+  document.body.classList.remove("signal-red", "signal-yellow", "signal-green");
   setThemeColor("#4b5d67");
 }
 
@@ -52,6 +55,10 @@ function showSignal(signalName) {
   controlPanel.hidden = true;
   displayPanel.hidden = false;
   document.body.style.overflow = "hidden";
+  rootElement.classList.remove("signal-red", "signal-yellow", "signal-green");
+  document.body.classList.remove("signal-red", "signal-yellow", "signal-green");
+  rootElement.classList.add(`signal-${signalName}`);
+  document.body.classList.add(`signal-${signalName}`);
   setThemeColor(signal.color);
 }
 
