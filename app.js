@@ -18,7 +18,6 @@ const signalConfig = {
 
 const controlPanel = document.querySelector("#controlPanel");
 const displayPanel = document.querySelector("#displayPanel");
-const displayTitle = document.querySelector("#displayTitle");
 const displaySurface = document.querySelector("#displaySurface");
 const signalButtons = document.querySelectorAll("[data-signal]");
 const themeColorMeta = document.querySelector('meta[name="theme-color"]');
@@ -57,7 +56,6 @@ async function showSignal(signalName) {
 
   clearStateClasses();
   displayPanel.classList.add(signal.cssClass);
-  displayTitle.textContent = signal.title;
   controlPanel.hidden = true;
   displayPanel.hidden = false;
   document.body.style.overflow = "hidden";

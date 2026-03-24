@@ -186,18 +186,11 @@ h1 {
   text-align: center;
 }
 
-.display-title {
-  font-size: clamp(2.2rem, 8vw, 5rem);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 .display-hint {
   font-size: 0.95rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.88;
+  opacity: 0.72;
 }
 
 .display-panel.is-idle {
