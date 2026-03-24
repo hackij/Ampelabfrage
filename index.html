@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ampelabfrage</title>
+    <meta name="theme-color" content="#4b5d67" />
+    <meta
+      name="description"
+      content="Einfache Ampelabfrage für den Unterricht mit großer Farbanzeige auf dem Smartphone."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="intro-card" id="controlPanel">
+        <p class="eyebrow">Schnelle Unterrichtsrückmeldung</p>
+        <h1>Ampelabfrage</h1>
+        <p class="intro-text">
+          Wähle die Farbe, die am besten zu deiner aktuellen Situation passt.
+        </p>
+
+        <div class="button-grid" aria-label="Ampelfarben">
+          <button class="signal-button signal-red" data-signal="red" type="button">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="signal-copy">
+              <strong>Rot</strong>
+              <span>Ich brauche Hilfe</span>
+            </span>
+          </button>
+
+          <button class="signal-button signal-yellow" data-signal="yellow" type="button">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="signal-copy">
+              <strong>Gelb</strong>
+              <span>Ich bin unsicher</span>
+            </span>
+          </button>
+
+          <button class="signal-button signal-green" data-signal="green" type="button">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="signal-copy">
+              <strong>Grün</strong>
+              <span>Ich komme gut mit</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="meta-actions">
+          <button id="fullscreenButton" class="secondary-button" type="button">
+            Vollbild
+          </button>
+          <button id="resetButton" class="secondary-button" type="button">
+            Zurücksetzen
+          </button>
+        </div>
+
+        <div class="teacher-note">
+          <h2>Praktische Idee für den Unterricht</h2>
+          <p>
+            Zusätzlich zur Farbe kann auf dem Display ein kurzer Statussatz und die Uhrzeit
+            der Auswahl stehen. So sehen Sie schneller, ob die Rückmeldung aktuell ist.
+          </p>
+        </div>
+      </section>
+
+      <section class="display-panel is-idle" id="displayPanel" aria-live="polite">
+        <div class="display-content">
+          <p class="display-label">Aktuelle Auswahl</p>
+          <div class="display-signal" id="displaySignal" aria-hidden="true"></div>
+          <h2 id="displayTitle">Noch keine Farbe gewählt</h2>
+          <p id="displayDescription">
+            Tippe auf eine Ampelfarbe. Danach kann das Handy hochgehalten werden.
+          </p>
+          <p class="timestamp" id="timestamp">Bereit</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
