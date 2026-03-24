@@ -264,8 +264,8 @@ h1 {
   z-index: 20;
   overflow: hidden;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.18), transparent 34%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.1), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -282,8 +282,8 @@ h1 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 24%),
-    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.24), transparent 34%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 20%),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.12), transparent 28%);
   pointer-events: none;
 }
 
