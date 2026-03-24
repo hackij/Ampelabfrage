@@ -62,8 +62,17 @@ signalButtons.forEach((button) => {
   });
 });
 
-displaySurface.addEventListener("click", () => {
+function returnToSelection() {
   showSelection();
+}
+
+displayPanel.addEventListener("click", returnToSelection);
+
+displaySurface.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    returnToSelection();
+  }
 });
 
 showSelection();
