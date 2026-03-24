@@ -16,7 +16,6 @@ const signalConfig = {
   },
 };
 
-const appShell = document.querySelector(".app-shell");
 const controlPanel = document.querySelector("#controlPanel");
 const displayPanel = document.querySelector("#displayPanel");
 const displayTitle = document.querySelector("#displayTitle");
@@ -45,7 +44,7 @@ function showSelection() {
   displayPanel.classList.add("is-idle");
   controlPanel.hidden = false;
   displayPanel.hidden = true;
-  appShell.classList.remove("display-mode");
+  document.body.style.overflow = "";
   setThemeColor("#4b5d67");
 }
 
@@ -61,7 +60,7 @@ async function showSignal(signalName) {
   displayTitle.textContent = signal.title;
   controlPanel.hidden = true;
   displayPanel.hidden = false;
-  appShell.classList.add("display-mode");
+  document.body.style.overflow = "hidden";
   setThemeColor(signal.color);
   try {
     await enableFullscreen();
