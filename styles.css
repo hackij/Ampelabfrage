@@ -324,31 +324,19 @@ h1 {
 }
 
 .display-panel.is-idle {
-  background:
-    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.34), transparent 20%),
-    radial-gradient(circle at 82% 10%, rgba(255, 255, 255, 0.32), transparent 18%),
-    linear-gradient(160deg, #cbd8e8 0%, #89a2be 100%);
+  background: #89a2be;
 }
 
 .display-panel.is-red {
-  background:
-    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.36), transparent 18%),
-    radial-gradient(circle at 82% 20%, rgba(255, 167, 160, 0.3), transparent 20%),
-    linear-gradient(160deg, #ff9f97 0%, #ff5b50 58%, #ff3b30 100%);
+  background: #ff3b30;
 }
 
 .display-panel.is-yellow {
-  background:
-    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.38), transparent 18%),
-    radial-gradient(circle at 82% 20%, rgba(255, 235, 153, 0.3), transparent 20%),
-    linear-gradient(160deg, #ffe57a 0%, #ffd426 58%, #ffcc00 100%);
+  background: #ffcc00;
 }
 
 .display-panel.is-green {
-  background:
-    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.36), transparent 18%),
-    radial-gradient(circle at 82% 20%, rgba(163, 237, 185, 0.3), transparent 20%),
-    linear-gradient(160deg, #8ae3a3 0%, #4fd074 58%, #34c759 100%);
+  background: #34c759;
 }
 
 .display-panel.is-yellow .display-surface {
