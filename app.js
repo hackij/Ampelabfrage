@@ -32,12 +32,6 @@ function setThemeColor(color) {
   }
 }
 
-async function enableFullscreen() {
-  if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
-    await document.documentElement.requestFullscreen();
-  }
-}
-
 function showSelection() {
   clearStateClasses();
   displayPanel.classList.add("is-idle");
@@ -60,12 +54,6 @@ function showSignal(signalName) {
   displayPanel.hidden = false;
   document.body.style.overflow = "hidden";
   setThemeColor(signal.color);
-
-  requestAnimationFrame(() => {
-    enableFullscreen().catch(() => {
-      // Fullscreen is optional; the color view still works without it.
-    });
-  });
 }
 
 signalButtons.forEach((button) => {
@@ -74,14 +62,7 @@ signalButtons.forEach((button) => {
   });
 });
 
-displaySurface.addEventListener("click", async () => {
-  if (document.fullscreenElement && document.exitFullscreen) {
-    try {
-      await document.exitFullscreen();
-    } catch {
-      // Ignore fullscreen exit failures and still return to the selection view.
-    }
-  }
+displaySurface.addEventListener("click", () => {
   showSelection();
 });
 
