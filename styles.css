@@ -79,6 +79,18 @@ h1 {
   gap: 18px;
 }
 
+.app-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: rgba(82, 96, 109, 0.9);
+}
+
 .signal-button {
   display: flex;
   align-items: center;
